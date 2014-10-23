@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echo "Begin mongoDb"
+echo "Begin mongoDb server"
 
 echo "  adding MongoDB public key"
 apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
@@ -25,5 +25,5 @@ echo "  re-starting mongod service"
 service mongod stop
 service mongod start
 
-echo "mongoDb installed"
+echo "mongoDb server installed"
 
