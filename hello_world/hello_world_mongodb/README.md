@@ -6,3 +6,7 @@
 ### install mongodb driver
 
     npm install -s mongodb
+
+### run the app
+
+    node app.js
