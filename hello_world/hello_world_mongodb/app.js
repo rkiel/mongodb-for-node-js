@@ -1,7 +1,7 @@
 var MongoClient = require('mongodb').MongoClient;
 
 // Open the connection to the server
-MongoClient.connect('mongodb://127.0.0.1:27017/test', function(err, db) {
+MongoClient.connect('mongodb://192.168.33.30:27017/test', function(err, db) {
     if(err) throw err;
 
     // Find one document in our collection
