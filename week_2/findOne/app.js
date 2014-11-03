@@ -1,6 +1,6 @@
 var MongoClient = require('mongodb').MongoClient;
 
-MongoClient.connect('mongodb://localhost:27017/course', function(err, db) {
+MongoClient.connect('mongodb://192.168.33.30:27017/course', function(err, db) {
     if(err) throw err;
 
     var query = { 'grade' : 100 };
