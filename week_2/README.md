@@ -12,3 +12,7 @@
     mongo --host 192.168.33.30
     use course
     db.grades.find()
+
+### download some JSON from reddit
+
+    curl http://www.reddit.com/r/personalfinance/.json > reddit.json
