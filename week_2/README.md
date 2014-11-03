@@ -9,6 +9,6 @@
 
 ### verify data
 
-    mongo
+    mongo --host 192.168.33.30
     use course
     db.grades.find()
