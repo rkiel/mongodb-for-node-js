@@ -32,6 +32,7 @@ Figure out the "State" that recorded the lowest "Temperature" when the wind was 
     
     db.data.find(whereJson,projectionJson).sort(sortJson).limit(1)
     
+    user weather
     var sortJson = { 'State' : 1, 'Temperature' : 1 }
     var cursor = db.data.find().sort(sortJson)
     var high_score = { }
