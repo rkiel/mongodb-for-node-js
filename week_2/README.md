@@ -39,7 +39,10 @@ Figure out the "State" that recorded the lowest "Temperature" when the wind was 
     cursor.forEach(function(doc) {
       high_score[doc.State] = doc._id
     })
-    console.log(high_score)
-    
+    for (var key in high_score) { 
+      var whereJson = { "_id" : high_score[key] }
+      var operationJson = { $set: { 'month_high' : true }}
+      db.data.update(whereJson, operationJson)
+    }
     
     
