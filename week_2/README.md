@@ -30,6 +30,6 @@ Figure out the "State" that recorded the lowest "Temperature" when the wind was 
     var sortJson  = { 'Temperature' : 1 }
     var projectionJson = { "State" : true, "Temperature" : true, "_id" : false }
     
-    db.data.findOne(whereJson,projectionJson).sort(sortJson)
+    db.data.find(whereJson,projectionJson).sort(sortJson).limit(1)
     
     
