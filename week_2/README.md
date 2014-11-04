@@ -16,3 +16,11 @@
 ### download some JSON from reddit
 
     curl http://www.reddit.com/r/personalfinance/.json > reddit.json
+
+### Homework 2.1
+
+    mongoimport --host 192.168.33.30 --type csv --headerline weather_data.csv -d weather -c data
+    mongo --host 192.168.33.30
+    use weather
+    db.data.find().count()
+    
