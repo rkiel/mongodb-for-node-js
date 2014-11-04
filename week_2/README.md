@@ -26,5 +26,9 @@
     
 Figure out the "State" that recorded the lowest "Temperature" when the wind was coming from the west ("Wind Direction" between 180 and 360).
 
-    var direction = { "Wind Direction": { $gt: 180, $lt: 360 } }
+    var whereJson = { "Wind Direction": { $gt: 180, $lt: 360 } }
+    var sortJson  = { 'Temperature' : 1 }
+    
+    db.data.findOne(whereJson).sort(sortJson)
+    
     
