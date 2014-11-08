@@ -10,7 +10,8 @@ var url = 'mongodb://'+address+':'+port+'/'+database;
 MongoClient.connect(url, function(err, db) {
     if(err) throw err;
 
-    cursor = db.collection(collection).find(whereJson);
+    collection = db.collection(collection)
+    var cursor = collection.find(whereJson);
     cursor.each(function(err, doc) {
       if(err) throw err;
 
