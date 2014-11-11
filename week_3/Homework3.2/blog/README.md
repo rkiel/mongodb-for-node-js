@@ -16,3 +16,6 @@ Validation
 
     npm install
     node hw3-2validate.js -h 192.168.33.60 -d 'mongodb://192.168.33.30:27017/blog'
+
+    npm install
+    node hw3-3validate.js -h 192.168.33.60 -d 'mongodb://192.168.33.30:27017/blog'
