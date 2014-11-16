@@ -32,3 +32,9 @@ Validate
     npm install
 
     node hw4-3_validate.js -h 192.168.33.30
+
+Import more data
+
+    mongoimport -h 192.168.33.30 -d m101 -c profile < sysprofile.json
+
+    db.profile.find({ns:{$regex:'^school2.students.*'}},{millis:1}).sort({'millis':-1})
