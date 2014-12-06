@@ -21,3 +21,16 @@ Which pair of people have the greatest number of messages in the dataset?
       {$group:   {_id:{from:"$from",to:"$to"},count:{$sum:1}}},
       {$sort:    {count:-1}}
     ])
+
+Please add the email address "mrpotatohead@mongodb.com" to the list of addresses in the "headers.To" array for the document with "headers.Message-ID" of "<8147308.1075851042335.JavaMail.evans@thyme>"
+
+    db.messages.update(
+      {"headers.Message-ID":"<8147308.1075851042335.JavaMail.evans@thyme>"},
+      {$push:{"headers.To":"mrpotatohead@mongodb.com"}}
+    )
+
+    vagrant ssh node
+    cd /vagrant/week_7/Question1_3/validate3
+    npm install
+    node final3-validate.js  -h 192.168.33.30
+
